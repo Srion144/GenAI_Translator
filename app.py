@@ -53,7 +53,6 @@ def translate_and_speak(text, source_lang, target_lang):
 
         tts_lang = flores_to_iso_tts.get(target_code, "en")
         tts = gTTS(translated_text, lang=tts_lang)
-        os.makedirs("static", exist_ok=True)
         audio_path = "static/output.mp3"
         tts.save(audio_path)
 
@@ -111,6 +110,4 @@ with gr.Blocks(css="styles.css",title="🌍 GenAI Multilingual Translator") as i
         outputs=[source_lang, target_lang]
     )
 
-if __name__ == "__main__":
-    iface.launch(server_name="0.0.0.0", server_port=10000)
-
+iface.launch()
