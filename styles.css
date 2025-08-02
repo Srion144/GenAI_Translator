@@ -1,0 +1,109 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 0.2em;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Container with logo and heading */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10px 10px;
+    flex-direction: column;
+}
+
+.header img.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #aaa;
+}
+
+.illustration {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.illustration img {
+    max-width: 300px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+/* Text input area */
+.gr-textbox textarea {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Buttons */
+.gr-button {
+    background-color: #4A90E2 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 12px !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    transition: 0.3s ease-in-out;
+}
+
+.gr-button:hover {
+    background-color: #357ABD !important;
+    transform: scale(1.05);
+}
+
+/* Dropdowns */
+.gr-dropdown select {
+    font-size: 16px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+/* Output box */
+.gr-box {
+    border-radius: 15px !important;
+    padding: 15px !important;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+/* For the logo */
+.logo {
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* For the illustration */
+.illustration img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
