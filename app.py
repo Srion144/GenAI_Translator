@@ -53,11 +53,12 @@ def translate_and_speak(text, source_lang, target_lang):
 
         tts_lang = flores_to_iso_tts.get(target_code, "en")
         tts = gTTS(translated_text, lang=tts_lang)
-        audio_path = "static/output.mp3"
-        tts.save(audio_path)
+        audio_bytes = io.BytesIO()
+        tts.write_to_fp(audio_bytes)
+        audio_bytes.seek(0)
 
         display_text = f"🔤 From: {source_lang_display}\n🎯 To: {target_lang}\n\n📝 Translated Text:\n{translated_text}"
-        return display_text, audio_path
+        return display_text, audio_bytes
     except Exception as e:
         return f"❌ Error: {str(e)}", None
 
@@ -73,7 +74,7 @@ def swap_langs(src, tgt):
 language_options = ["Auto-Detect"] + list(language_dict.keys())
 
 # 🌐 UI Design
-with gr.Blocks(css="styles.css",title="🌍 GenAI Multilingual Translator") as iface:
+with gr.Blocks(css="styles.css") as iface:
     gr.Markdown(
         """
         <div style="text-align: center;">
