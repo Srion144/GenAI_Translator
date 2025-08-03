@@ -53,12 +53,16 @@ python app.py
 
 ## 📁 Folder Structure
 
+```
+
 genai-translator/
 ├── app.py
 ├── requirements.txt
 ├── static/
 │   └── output.mp3
 └── README.md
+
+```
 
 ---
 
