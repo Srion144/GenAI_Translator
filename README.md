@@ -52,6 +52,7 @@ python app.py
 ---
 
 ##📁 Folder Structure
+
 genai-translator/
 ├── app.py
 ├── requirements.txt
@@ -62,12 +63,14 @@ genai-translator/
 ---
 
 ##🧪 Model Used
+
 -facebook/nllb-200-distilled-600M
 A multilingual machine translation model by Meta AI that supports 200+ languages.
 
 ---
 
 ##👩‍💻 Author
+
 Srishti
 B.Tech CSE Student 
 📍 Prayagraj, India
